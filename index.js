@@ -4,7 +4,7 @@ var moment = require('moment');
 var cool = require('cool-ascii-faces');
 
 app.set('port', (process.env.PORT || 5000));
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
 
 app.use("/scripts", express.static(__dirname + "/public/scripts"));
 app.use("/images", express.static(__dirname + "/public/images"));
