@@ -14,7 +14,7 @@ app.use("/fonts", express.static(__dirname + "/../app/public/fonts"));
 app.use("/vendor", express.static(__dirname + "/../app/public/vendor"));
 
 // This route deals enables HTML5Mode by forwarding missing files to the index.html
-app.all('/*', function(req, res) {
+app.all('*', function(req, res) {
   res.sendfile(__dirname + '/public/index.html');
 });
 
