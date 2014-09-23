@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/public'));
 
 // This route deals enables HTML5Mode by forwarding missing files to the index.html
 app.all('/*', function(req, res) {
-  res.sendfile('index.html');
+  res.sendfile(__dirname + '/public/index.html');
 });
 
 app.listen(app.get('port'), function() {
