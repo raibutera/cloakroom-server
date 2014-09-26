@@ -35,11 +35,11 @@ var extensionsPattern = allowedExtensions
 
 app.use(modRewrite([
   // '!' + extensionsPattern + '$ index.html [L]'
-  '!' + extensionsPattern + '$ index.html'
+  '!' + extensionsPattern + '$ /index.html'
 ]));
 
 app.use(express.static(__dirname + '/public'));
 
 app.listen(app.get('port'), function() {
-  console.log("Cloakroom express server is running at localhost:" + app.get('port'));
+  console.log("Cloakroom express server is running on port " + app.get('port'));
 });
