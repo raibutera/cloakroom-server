@@ -1,0 +1,7 @@
+<div id="modal-overlay">
+    <h1>{{errorTitle}}</h1>
+    <p>{{errorText}}</p>
+    <div class="buttons-container"><a class="button" ng-if="extraLink.show" ng-href="extraLink.url">{{extraLink.text}}</a>
+        <div class="button" ng-click="close()">Got it.</div></div>
+</div>
+<div id="modal-fade"></div>

@@ -1,0 +1,8 @@
+<div id="application-confirmation-container">
+  <h1>Thank You!</h1>
+  <p><str>{{Guestlist.event.attributes.memberHost.attributes.firstName}}</str> has been notified.</p>
+
+  <h3>More:</h3>
+  <button type="button" class="btn btn-lg btn-warning" id="host-profile" ng-click="Guestlist.controls.go.toHostProfile()">{{Guestlist.event.attributes.memberHost.attributes.firstName}}'s Profile</button>
+  <button type="button" class="btn btn-lg btn-info" id="event-page" ng-click="Guestlist.controls.go.backToEvent()">Event Page</button>
+</div>
