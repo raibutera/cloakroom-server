@@ -2,9 +2,11 @@ var express = require('express');
 var app = express();
 var moment = require('moment');
 var modRewrite = require('connect-modrewrite');
+var compression = require('compression');
 
 app.set('port', (process.env.PORT || 5000));
 
+app.use(compression());
 
 var allowedExtensions = [
   'html',

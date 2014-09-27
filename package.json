@@ -34,6 +34,7 @@
   "homepage": "https://github.com/heroku/node-js-getting-started",
   "devDependencies": {
     "chai": "^1.9.1",
+    "compression": "^1.1.0",
     "mocha": "^1.21.4",
     "sinon": "^1.10.3"
   },
