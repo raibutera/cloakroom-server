@@ -12,7 +12,8 @@ angular.module('cloakroomApp.parseWrappers')
 
     Parse.FacebookUtils.init({
       // pro-tip: swap App ID out for PROD App ID automatically on deploy using grunt-replace
-      appId: 265277097014494, // Facebook App ID
+      // appId: 265277097014494, // Facebook App ID
+      appId: 250159355192935, // Facebook App ID
       channelUrl: '//www.cloakroom.me/channel.html', // Channel File
       cookie: true, // enable cookies to allow Parse to access the session
       xfbml: false, // parse XFBML
