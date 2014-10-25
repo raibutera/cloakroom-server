@@ -1,9 +1,7 @@
 <div id="apply-container">
     <div ng-hide="Guestlist.nonMemberStepTwo">
-            <h1>{{Guestlist.controls.existingApplication.exists ? "Update" : "Guestlist"}} Application</h1>
-
+            <h1>{{Guestlist.controls.existingApplication.exists ? "Update" : "Guestlist"}} Request</h1>
             <form id="event-apply-form" name="applicationForm" novalidate>
-
                 <div ng-if="!userIsLoggedIn"><h3>Are you a <div class="cloakroom-logo logo-small">Cloakroom</div>member?</h3>
 
                 <input type="radio" id="notmember" name="member" ng-value="false"+ ng-model="Guestlist.userApplication.isMember" ng-change="clickIsMember()"></input><label for="notmember" ng-click="clickIsMember()">No</label>
@@ -30,36 +28,6 @@
                     <option value=8>+8 Guys</option>
                     <option value=9>+9 Guys</option>
                     <option value=10>+10 Guys</option>
-                    <option value=11>+11 Guys</option>
-                    <option value=12>+12 Guys</option>
-                    <option value=13>+13 Guys</option>
-                    <option value=14>+14 Guys</option>
-                    <option value=15>+15 Guys</option>
-                    <option value=16>+16 Guys</option>
-                    <option value=17>+17 Guys</option>
-                    <option value=18>+18 Guys</option>
-                    <option value=19>+19 Guys</option>
-                    <option value=20>+20 Guys</option>
-                    <option value=21>+21 Guys</option>
-                    <option value=22>+22 Guys</option>
-                    <option value=23>+23 Guys</option>
-                    <option value=24>+24 Guys</option>
-                    <option value=25>+25 Guys</option>
-                    <option value=26>+26 Guys</option>
-                    <option value=27>+27 Guys</option>
-                    <option value=28>+28 Guys</option>
-                    <option value=29>+29 Guys</option>
-                    <option value=30>+30 Guys</option>
-                    <option value=31>+31 Guys</option>
-                    <option value=32>+32 Guys</option>
-                    <option value=33>+33 Guys</option>
-                    <option value=34>+34 Guys</option>
-                    <option value=35>+35 Guys</option>
-                    <option value=36>+36 Guys</option>
-                    <option value=37>+37 Guys</option>
-                    <option value=38>+38 Guys</option>
-                    <option value=39>+39 Guys</option>
-                    <option value=40>+40 Guys</option>
                 </select>
                 <label for="male-plusones"><i class="cr-i-triangle male"></i></label>
             </div>
@@ -77,36 +45,6 @@
                     <option value=8>+8 Girls</option>
                     <option value=9>+9 Girls</option>
                     <option value=10>+10 Girls</option>
-                    <option value=11>+11 Girls</option>
-                    <option value=12>+12 Girls</option>
-                    <option value=13>+13 Girls</option>
-                    <option value=14>+14 Girls</option>
-                    <option value=15>+15 Girls</option>
-                    <option value=16>+16 Girls</option>
-                    <option value=17>+17 Girls</option>
-                    <option value=18>+18 Girls</option>
-                    <option value=19>+19 Girls</option>
-                    <option value=20>+20 Girls</option>
-                    <option value=21>+21 Girls</option>
-                    <option value=22>+22 Girls</option>
-                    <option value=23>+23 Girls</option>
-                    <option value=24>+24 Girls</option>
-                    <option value=25>+25 Girls</option>
-                    <option value=26>+26 Girls</option>
-                    <option value=27>+27 Girls</option>
-                    <option value=28>+28 Girls</option>
-                    <option value=29>+29 Girls</option>
-                    <option value=30>+30 Girls</option>
-                    <option value=31>+31 Girls</option>
-                    <option value=32>+32 Girls</option>
-                    <option value=33>+33 Girls</option>
-                    <option value=34>+34 Girls</option>
-                    <option value=35>+35 Girls</option>
-                    <option value=36>+36 Girls</option>
-                    <option value=37>+37 Girls</option>
-                    <option value=38>+38 Girls</option>
-                    <option value=39>+39 Girls</option>
-                    <option value=40>+40 Girls</option>
                 </select>
                 <label for="female-plusones"><i class="cr-i-triangle female"></i></label>
             </div>
@@ -126,7 +64,7 @@
             ng-click="Guestlist.controls.go.submitApplication()"
             ng-class="{invalidApplication:!currentUser.isLogged && !Guestlist.isMemberClicked, applying: Guestlist.controls.applying, solo: !Guestlist.controls.existingApplication.exists || Guestlist.controls.applying}"
             ng-bind="Guestlist.applyButtonText">
-                    Apply
+                    Send
             </div>
 
         </form>
@@ -167,7 +105,7 @@
             ng-click="Guestlist.controls.go.submitApplication()"
             ng-class="{invalidApplication: nonMember.$invalid, applying: Guestlist.controls.applying, solo: !Guestlist.controls.existingApplication.exists || Guestlist.controls.applying}"
             ng-bind="Guestlist.applyButtonText">
-            Apply
+            Send
         </div>
 
     </div>
