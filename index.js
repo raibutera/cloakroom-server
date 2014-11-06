@@ -14,7 +14,7 @@ var LOG = require('./libraries/cloakroom/log.js');
 LOG.info('Cloakroom Server Initialising...', true, 'startup', false);
 
 app.set('port', (process.env.PORT || 5000));
-app.use(require('prerender-node').set('prerenderToken', 'PzuvQlJA7jjTrPaX08u8'));
+
 app.use(compression());
 
 var allowedExtensions = [
@@ -47,6 +47,8 @@ var extensionsPattern = allowedExtensions
 app.use(modRewrite([
   '!' + extensionsPattern + '$ /index.html'
 ]));
+
+app.use(require('prerender-node').set('prerenderToken', 'PzuvQlJA7jjTrPaX08u8'));
 
 app.use(express.static(__dirname + '/public'));
 
