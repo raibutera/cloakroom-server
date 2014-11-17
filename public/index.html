@@ -1,10 +1,19 @@
-<!doctype html> <html class="no-js" ng-controller="MasterCtrl"> <head> <meta charset="utf-8"> <meta name="fragment" content="!"> <title ng-bind="$root.pageTitle">Cloakroom</title> <meta name="description" content="{{$root.pageDescription}}"> <meta property="og:image" content="{{$root.pageImage}}"> <meta name="viewport" content="width=320,initial-scale=1,maximum-scale=1,user-scalable=no"> <meta name="304Fix" content="safari-fix"> <link rel="apple-touch-icon" sizes="152×152" href="/apple152.png"> <link rel="apple-touch-icon" sizes="128x128" href="/apple128.png"> <link rel="apple-touch-icon" sizes="76×76" href="/apple76.png"> <link rel="apple-touch-icon" href="/apple57.png"> <base href="/"> <meta name="apple-mobile-web-app-title" content="cloakroom.me"> <link rel="stylesheet" href="styles/vendor.186cebdd.css"> <link rel="stylesheet" href="styles/main.f3f3b4e0.css"> <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3">  <body ng-controller="BodyCtrl as body" ng-class="{day:body.controls.isDay}"> <!--[if lt IE 7]>
+<!doctype html> <html class="no-js" ng-controller="MasterCtrl"> <head> <meta charset="utf-8"> <meta name="fragment" content="!"> <title ng-bind="$root.pageTitle">Cloakroom</title> <meta name="description" content="{{$root.pageDescription}}"> <meta property="og:image" content="{{$root.pageImage}}"> <meta name="viewport" content="width=320,initial-scale=1,maximum-scale=1,user-scalable=no"> <meta name="304Fix" content="safari-fix"> <link rel="apple-touch-icon" sizes="152×152" href="/apple152.png"> <link rel="apple-touch-icon" sizes="128x128" href="/apple128.png"> <link rel="apple-touch-icon" sizes="76×76" href="/apple76.png"> <link rel="apple-touch-icon" href="/apple57.png"> <base href="/"> <meta name="apple-mobile-web-app-title" content="cloakroom.me"> <link rel="stylesheet" href="styles/vendor.186cebdd.css"> <link rel="stylesheet" href="styles/main.b9247c5e.css"> <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3"> <!-- google analytics --> <script>/* jshint ignore:start */
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-56811840-1', 'auto');
+          ga('require', 'displayfeatures');
+          ga('send', 'pageview');
+          /* jshint ignore:end */</script>  <body ng-controller="BodyCtrl as body" ng-class="{day:body.controls.isDay}"> <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> and <strong>incompatible</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience!</p>
         <![endif]--> <div> <noscript>Please enable Javascript to experience Cloakroom</noscript> <cloakroom-header ng-show="checkHeaderVisibility()"></cloakroom-header> <div ng-if="!isViewLoading" ng-hide="isViewLoading"> <div id="cloakroom-menu" snap-drawer="left"> <div ng-if="currentUser.isLogged"> <div ng-include="'/views/menu.html'"></div> </div> </div> </div> <div id="cloakroom-content" snap-id="'main'" snap-content snap-options="body.snapOptions.content"> <div class="notHeader" id="loading-base" view-loading ng-show="isViewLoading"></div> <div ng-hide="isViewLoading"> <div class="notHeader" ui-view></div> </div> <div class="notHeader" id="cloakroom-footer"></div> <cloakroom-test ng-if="(body.developmentMode || body.forceTestPanel) && body.showTestPanel"></cloakroom-test> </div> <div id="cloakroom-dev" class="notHeader" snap-drawer="right"> <div id="dev-drawer" ng-if="(!isViewLoading && body.developmentMode) || body.forceDevDrawer"> <div ng-include="'/views/devpanel.html'"></div> </div> </div> </div> <!--[if lt IE 9]>
     <script src="scripts/oldieshim.ff90b0fb.js"></script>
     <![endif]--> <script src="scripts/vendor.37a8a657.js"></script> <script>/* jshint ignore:start */
     UPLOADCARE_LOCALE = "en"; UPLOADCARE_TABS = "file facebook instagram"; UPLOADCARE_AUTOSTORE = false; UPLOADCARE_PUBLIC_KEY = "eac1dfa24386b9fe53dd"; UPLOADCARE_MANUAL_START = true;
-    /* jshint ignore:end */</script> <script src="scripts/scripts.2b2090b6.js"></script> <!-- Async Social SDKs --> <div id="fb-root"></div> <script type="text/javascript">/* jshint ignore:start */
+    /* jshint ignore:end */</script> <script src="scripts/scripts.e85180e0.js"></script> <!-- Async Social SDKs --> <div id="fb-root"></div> <script type="text/javascript">/* jshint ignore:start */
       (function(doc, script) {
         var js,
             fjs = doc.getElementsByTagName(script)[0],
@@ -17,14 +26,7 @@
             };
         // Facebook SDK
         add('//connect.facebook.net/en_US/all.js', 'facebook-jssdk');
-      }(document, 'script'));</script> <!-- google analytics --> <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-56811840-1', 'auto');
-      ga('require', 'displayfeatures');
-      ga('send', 'pageview');</script> <script type="text/javascript">// manual angular bootstrap
+      }(document, 'script'));</script> <script type="text/javascript">// manual angular bootstrap
       angular.element(document).ready(function() {
         angular.bootstrap(document, ['cloakroomApp']);
       });
