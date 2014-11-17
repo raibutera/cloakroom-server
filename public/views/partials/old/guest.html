@@ -1,0 +1,14 @@
+<div class="guestlist-item">
+  <div class="guestlist-item-main" ng-class="{female: {{guest.is_female}}}">
+  
+  <div class="guestlist-item-pic" ng-class="{female: {{guest.is_female}}}">
+    <img ng-src="img/square/{{guest.name + guest.lastname | lowercase}}.jpg" alt="{{guest.name}} {{guest.lastname}}">
+  </div>
+
+  <div class="guestlist-item-name">{{guest.name}}</div>
+  <div class="guestlist-item-phone">{{guest.mobile_number}}</div>
+
+</div>
+
+<button class="guestlist-item-checkin"></button>
+</div>
