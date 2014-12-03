@@ -4,8 +4,8 @@
             <form id="event-apply-form" name="applicationForm" novalidate>
                 <div ng-if="!userIsLoggedIn"><h3>Are you a <div class="cloakroom-logo logo-small">Cloakroom</div>member?</h3>
 
-                <input type="radio" id="notmember" name="member" ng-value="false"+ ng-model="Guestlist.userApplication.isMember" ng-change="clickIsMember()"></input><label for="notmember" ng-click="clickIsMember()">No</label>
-                <input type="radio" id="ismember" name="member" ng-value="true"+ ng-model="Guestlist.userApplication.isMember" ng-change="clickIsMember()"></input><label for="ismember" ng-click="clickIsMember()">Yes</label>
+                <input type="radio" id="notmember" name="member" ng-value="false" ng-model="Guestlist.userApplication.isMember" ng-change="clickIsMember()"></input><label for="notmember" ng-click="clickIsMember()">No</label>
+                <input type="radio" id="ismember" name="member" ng-value="true" ng-model="Guestlist.userApplication.isMember" ng-change="clickIsMember()"></input><label for="ismember" ng-click="clickIsMember()">Yes</label>
 
             <p id="explanation" ng-if="Guestlist.userApplication.isMember === false">
                 We will need your name and contact number <br>
